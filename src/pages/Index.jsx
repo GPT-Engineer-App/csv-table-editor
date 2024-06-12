@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { Container, VStack, Text, Button, Input, Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
-import { useCSVReader, useCSVDownloader } from "react-papaparse";
+import { CSVReader, CSVDownloader } from "react-papaparse";
 
 const Index = () => {
   const [csvData, setCsvData] = useState([]);
-  const { CSVReader } = useCSVReader();
-  const { CSVDownloader } = useCSVDownloader();
-
+  
   const handleUpload = (data) => {
     setCsvData(data);
   };
